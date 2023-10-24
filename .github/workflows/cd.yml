@@ -29,7 +29,7 @@ jobs:
       - name: Build Docker Container
         run: docker run -d --name my-container my-image
       - name: Copy artifact
-        run: docker cp my-container:/src/public/ ./public/
+        run: docker cp my-container:/src/public/ ./
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
