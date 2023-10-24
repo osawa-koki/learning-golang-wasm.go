@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "🫰🫰🫰 Go言語でWebAssemblyを学ぶためのリポジトリです！",
   "scripts": {
-    "dev": "http-server ./public/ -c1"
+    "dev": "http-server ./public/ -c1 -p 8000"
   },
   "repository": {
     "type": "git",
