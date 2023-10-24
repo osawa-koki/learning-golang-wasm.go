@@ -1,0 +1,21 @@
+{
+  "name": "learning-golang-wasm.go",
+  "version": "1.0.0",
+  "description": "🫰🫰🫰 Go言語でWebAssemblyを学ぶためのリポジトリです！",
+  "scripts": {
+    "dev": "http-server ./public/ -c1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osawa-koki/learning-golang-wasm.go.git"
+  },
+  "author": "osawa-koki <koki@osawa.dev>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/osawa-koki/learning-golang-wasm.go/issues"
+  },
+  "homepage": "https://github.com/osawa-koki/learning-golang-wasm.go#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
