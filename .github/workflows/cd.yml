@@ -27,7 +27,7 @@ jobs:
       - name: Build Docker Image
         run: docker build -t my-image .
       - name: Build Docker Container
-        run: docker run -d --name my-contaienr my-image
+        run: docker run -d --name my-container my-image
       - name: Copy artifact
         run: docker cp my-container:/src/public/ ./public/
       - name: Upload artifact
