@@ -8,18 +8,15 @@
   <h1>Go WebAssembly</h1>
   <script>
     const go = new Go();
-    let mod, inst;
     WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
-      mod = result.module;
-      inst = result.instance;
+      go.run(result.instance);
       document.getElementById("runButton").disabled = false;
     }).catch((err) => {
       console.error(err);
     });
 
-    async function run() {
-      await go.run(inst);
-      inst = await WebAssembly.instantiate(mod, go.importObject);
+    function run() {
+      console.log(concat("Hello", " ", "World"))
     }
   </script>
 
