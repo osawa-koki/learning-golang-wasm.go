@@ -1,7 +1,21 @@
 package main
- 
-import "fmt"
- 
+
+import (
+  "fmt"
+  "syscall/js"
+)
+
+func concat(_ js.Value, args []js.Value) any {
+  var result string
+  for _, arg := range args {
+    result += arg.String()
+  }
+  return result
+}
+
 func main() {
-	fmt.Println("Hello, Go Assembly!")
+	fmt.Println("Go program started...")
+  js.Global().Set("concat", js.FuncOf(concat))
+  fmt.Println("Go funcitons setup complete.")
+  select {}
 }
